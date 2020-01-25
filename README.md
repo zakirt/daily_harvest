@@ -8,7 +8,7 @@
 
 ## Setup
 
-* Download the app
+* Git clone, or download the repo
 * Run `npm i` to install the dependencies
 
 ## Running the app
@@ -58,6 +58,7 @@ npm run test:tdd
 ```
 
 You can also target specific files.
+
 Ex.
 
 ```
