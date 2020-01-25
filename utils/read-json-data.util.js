@@ -5,10 +5,32 @@ const path = require('path');
 
 const dataDirectory = path.normalize(`${__dirname}/../data`);
 
-function readJsonFile(dataName) {
+// Use this to serve JSON data as "Flyweight" objects
+const dataLoaded = new Map();
+
+module.exports = readJsonData;
+
+function readJsonData(dataName) {
+    const fileContent = getJsonData(dataName);
+    return parseJsonFromFileContent(fileContent);
+}
+
+function getJsonData(dataName) {
+    if (!dataLoaded.has(dataName)) {
+        const data = readFromFile(dataName);
+        dataLoaded.set(dataName, data);
+    }
+    return dataLoaded.get(dataName);
+}
+
+function readFromFile(dataName) {
     const file = `${dataDirectory}/${dataName}.json`;
     const bufferedData = fs.readFileSync(file);
     const fileContent = bufferedData.toString();
+    return fileContent;
+}
+
+function parseJsonFromFileContent(fileContent) {
     let products;
     try {
         products = JSON.parse(fileContent);
@@ -17,5 +39,3 @@ function readJsonFile(dataName) {
     }
     return products;
 }
-
-module.exports = readJsonFile;

@@ -39,7 +39,7 @@ You can also target specific files.
 Ex.
 
 ```
-npm run test prodtcs.service
+npm run test products.service
 npm run test:tdd products.service
 ```
 
