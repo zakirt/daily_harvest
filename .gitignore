@@ -351,3 +351,6 @@ MigrationBackup/
 
 # MAC OSX
 .DS_Store
+
+# VSCode
+.vscode
