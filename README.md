@@ -1,4 +1,47 @@
-# Daily Harvest coding challenge
+# Daily Harvest Node service
+
+## Requirements
+
+* MAC OSX
+* Node 12+
+* NPM 6.13.4+
+
+## Setup
+
+* Download the app
+* Run `npm i` to install the dependencies
+
+## Running the app
+
+Use the following command to launch the server on port `9000`
+
+```
+node app.js
+```
+
+## Unit tests
+
+The app is using [jest](https://jestjs.io/) for unit testing.
+
+To test all files once run
+
+```
+npm test
+```
+
+To test all files in TDD mode (watch for file changes) run
+
+```
+npm run test:tdd
+```
+
+You can also target specific files.
+Ex.
+
+```
+npm run test prodtcs.service
+npm run test:tdd products.service
+```
 
 At Daily Harvest, we want to make it as easy as possible for our customers to get healthy food that they enjoy. One way to do this is to allow people to search for products that contain a favorite ingredient (apples, kale, cinnamon, etc.).
 
