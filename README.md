@@ -43,7 +43,7 @@ node app.js
 
 ## Unit tests
 
-The app is using [jest](https://jestjs.io/) for unit testing.
+The app is using [Jest framework](https://jestjs.io/) for unit testing.
 
 To test all files once run
 
