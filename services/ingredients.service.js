@@ -5,7 +5,8 @@ const readJsonData = require('../utils/read-json-data.util');
 class IngredientsService {
     constructor() {
         // Use this until we get DB service
-        this.ingredients = readJsonData('ingredients');
+        const data = readJsonData('ingredients');
+        this.ingredients = data.ingredients;
     }
 
     getIngredients() {
