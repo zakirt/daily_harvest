@@ -354,3 +354,6 @@ MigrationBackup/
 
 # VSCode
 .vscode
+
+# Jest
+coverage/
